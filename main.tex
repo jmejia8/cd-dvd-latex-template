@@ -1,0 +1,87 @@
+
+\documentclass[letterpaper,10pt,oneside]{scrreprt}
+\pagestyle{empty}
+
+%Sets margins in centimetres
+\usepackage[left=1cm, top=1cm, right=2cm, bottom=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{simplecd}
+\usepackage{graphicx}
+
+\usepackage{slantsc}
+\usepackage[math]{iwona}
+% \usepackage[T1]{fontenc}
+
+\newcommand{\portada}[4]{
+%
+	{%
+		\LARGE Universidad Veracruzana \\[0.2cm] %
+		\Large Facultad de Matemáticas\\[0.5cm] %
+		\bf T E S I S
+	} \\ 
+%
+	% \vspace{1cm} 
+%
+		\includegraphics[height=2cm]{uv.pdf}
+		\hspace{5cm}
+		\includegraphics[height=1.5cm]{matematicas.pdf}\\[.3cm]
+	\begin{minipage}{0.4\linewidth}
+		% \hrule
+		\centering
+		\textbf{Asesores:}\\[0.1cm]
+		\fontsize{7}{9} \selectfont
+		#1
+	\end{minipage}
+%
+	\hspace{2cm}%
+%
+	\begin{minipage}{0.4\linewidth}
+		\centering
+		\textbf{Presenta:}\\[0.1cm]
+		\fontsize{7}{12} \selectfont
+		%name
+		#2
+	\end{minipage}
+%
+% \hrule
+	\\[1cm]
+	\begin{minipage}{0.6\linewidth}
+		\begin{center}
+			\large \bf
+			%title
+			#3
+		\end{center}
+		%
+		\begin{center}
+			\small 
+			Que para Obtener el Grado de\\
+			{\bf Licenciado en Matemáticas}\\[.3cm]
+			Xalara, Ver., #4 %date
+		\end{center}
+	\end{minipage}
+%
+}
+
+		
+\newcommand{\nombre}{Jesús Adolfo Mejía de Dios}
+\newcommand{\asesores}{Dra. Martha Lorena Avendaño Garrido\\ Dr. Carlos Alberto Hernández Linares}
+\newcommand{\titulo}{Análisis de Componentes Independientes y Kerneles de Reproducción}
+\newcommand{\fecha}{Agosto, 2016.}
+
+\begin{document}
+
+	
+\djewel{
+	\portada{\asesores}{\nombre}{\titulo}{\fecha}
+}{
+	\portada{\asesores}{\nombre}{\titulo}{\fecha}
+}
+%
+%
+\newpage 
+%
+\cddvddisk{%
+	\portada{\asesores}{\nombre}{\titulo}{\fecha}
+}
+
+\end{document}
